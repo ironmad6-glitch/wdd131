@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template: 1fr 2fr 1fr / 1fr 2fr 1fr;
+    height: 45rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+
+header {
+    grid-column: 1/4;
+    background-color: aqua;
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+main {
+    grid-column: 1/3;
+    background-color: cadetblue;
+}
+
+aside {
+    grid-column: 3/4;
+    background-color: rgba(8, 174, 8, 0.769);
+}
+
+footer {
+    grid-column: 1/4;
+    background-color: rgba(128, 255, 0, 0.68);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: aquamarine;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+p {
+    padding: 10px;
+}
