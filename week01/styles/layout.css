@@ -31,6 +31,8 @@ aside {
 footer {
     grid-column: 1/4;
     background-color: rgba(128, 255, 0, 0.68);
+    display: flex;
+    justify-content: center;
 }
 
 nav {
