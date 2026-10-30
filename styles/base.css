@@ -46,11 +46,13 @@ main {
 }
 
 .card {
+    grid-row: 2/3;
     margin: 10px;
+    max-height: auto;
     border: solid 2px;
     border-radius: 15px;
     display: grid;
-    grid-template-rows: 25px 1rem;
+    grid-template-rows: 30px 1rem;
 }
 
 h1 {
@@ -59,7 +61,7 @@ h1 {
     justify-content: center;
 }
 
-h3 {
+h2 {
     padding: 0 0 0 10px;
     background-color: rgb(4, 198, 198);
     border-radius: 15px 15px 0 0;
@@ -72,14 +74,16 @@ div img {
     padding: 0 10px ;
 }
 
-h4 {
+h3 {
     margin-top: 10px;
+    text-decoration: underline 1.5px;
 }
 
 ul {
     display: flex;
     flex-direction: column;
-    padding: 0 0 0 20px;
+    padding: 0 0 0 30px;
+    font-size: 1.2rem;
 }
 
 .me div {
