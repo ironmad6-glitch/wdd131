@@ -1,11 +1,11 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif
+    font-family: "Redaction", serif;
 }
 
 header {
-    max-width: auto;
+    width: auto;
     display: grid;
     background-color: rgb(4, 198, 198);
 }
@@ -48,7 +48,6 @@ main {
 .card {
     grid-row: 2/3;
     margin: 10px;
-    max-height: auto;
     border: solid 2px;
     border-radius: 15px;
     display: grid;
