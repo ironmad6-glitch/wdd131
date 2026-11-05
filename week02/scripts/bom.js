@@ -2,16 +2,6 @@ const input = document.querySelector('#favchap');
 const button = document.querySelector('button');
 const list = document.querySelector('______');
 
-
-
-
-
-
-
-
-
-
-
 button.addEventListener('click', function () {
     //Code to execute when the button is clicked.
     if (input.value.trim() !== '') {
@@ -19,14 +9,12 @@ button.addEventListener('click', function () {
         li.textContent = input.value;
         const deleteButton = document.createElement('button');
         deleteButton.textContent = '❌';
-        list.append(li);
-        
         deleteButton.addEventListener('click', function () {
             list.removeChild(li);
             input.focus();
         });
-        li.append(deleteButton);
-        list.append(li);
+        li.appendChild(deleteButton);
+        list.appendChild(li);
         input.value = '';
     }
     input.focus();
