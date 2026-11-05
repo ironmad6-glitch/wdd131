@@ -23,7 +23,8 @@ button.addEventListener('click', function () {
             list.removeChild(li);
             input.focus();
         });
-    };
-    input.value = '';
+        li.appendChild(deleteButton);
+        input.value = '';
+    }
     input.focus();
 });
