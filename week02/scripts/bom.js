@@ -8,9 +8,9 @@ const list = document.querySelector('______');
 
 
 
-li.append(deleteButton);
 
-list.append(li);
+
+
 
 button.addEventListener('click', function () {
     //Code to execute when the button is clicked.
@@ -19,11 +19,14 @@ button.addEventListener('click', function () {
         li.textContent = input.value;
         const deleteButton = document.createElement('button');
         deleteButton.textContent = '❌';
+        list.append(li);
+        
         deleteButton.addEventListener('click', function () {
             list.removeChild(li);
             input.focus();
         });
-        li.appendChild(deleteButton);
+        li.append(deleteButton);
+        list.append(li);
         input.value = '';
     }
     input.focus();
