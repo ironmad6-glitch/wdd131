@@ -8,10 +8,28 @@
 
 header {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50px auto;
     padding: 0 15px;
     background-color: blue;
     color: white;
+}
+
+#menu {
+    font-size: 1.5rem;
+    color: white;
+    background-color: blue;
+    border: 0;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.show::before {
+    content: "X";
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 23px;
 }
 
 header p {
@@ -20,10 +38,22 @@ header p {
     font-size: 700;
 }
 
-nav {
+.navigation {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+}
+
+.navigation a {
+    display: block;
+}
+
+li {
+    display: none;
+}
+
+.show li {
+    display: block;
 }
 
 nav a {
