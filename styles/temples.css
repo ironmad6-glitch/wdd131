@@ -1,14 +1,11 @@
 * {
     margin: 0;
-    padding: 0;
-    min-width: auto;
-    min-height: auto;
     font-family: 'Tangerine', cursive;
 }
 
 header {
     display: grid;
-    grid-template-columns: 50px auto;
+    grid-template-columns: auto 50px;
     padding: 0 15px;
     background-color: blue;
     color: white;
@@ -35,17 +32,9 @@ header {
 header p {
     font-size: 40px;
     padding: 5px 0;
-    font-size: 700;
-}
-
-.navigation {
+    font-weight: 700;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.navigation a {
-    display: block;
+    justify-content: flex-start;
 }
 
 li {
@@ -54,6 +43,12 @@ li {
 
 .show li {
     display: block;
+    margin: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
 }
 
 nav a {
@@ -61,7 +56,7 @@ nav a {
     color: white;
     font-weight: 700;
     font-size: 23px;
-    padding: 5px;
+    padding: 10px;
 }
 
 nav a:hover {
@@ -75,13 +70,20 @@ main {
     padding: 5px 10px;
 }
 
+/* main {
+    display: grid;
+    grid-template-rows: 2rem auto;
+    grid-template-columns: auto;
+    place-items: center;
+} */
+
 .temple {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
 }
 
 figure img {
-    max-width: 225px;
+    width: 225px;
     height: auto;
 }
 
@@ -92,4 +94,5 @@ footer {
     flex-direction: column;
     height: auto;
     align-items: center;
+    padding: 5px;
 }
