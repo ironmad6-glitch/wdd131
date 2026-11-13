@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Country Page Project</title>
+    <meta name="author" content="Madsen Wood">
+    <meta name="description" content="This project is meant to show 
+        the skills that I have learned thus far.">
+    <link rel="stylesheet" href="styles/place-small.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Costa Rica</h1>
+    </header>
+    <main>
+        <picture>
+            <source srcset="images/costa-rica-large.webp" media="(min-width: 500px)">
+            <img src="images/costa-rica-small.webp" alt="Costa Rica" width="1000" height="563">
+        </picture>
+        <section>
+            <h2>Data</h2>
+            <ul></ul>
+        </section>
+        <section>
+            <h2>Weather</h2>
+            <picture>
+                <source srcset="images/sunny-day-red.svg" media="(min-width: 500px)"></source>
+                <img src="images/sunny-day.svg" alt="Weather Icon">
+            </picture>
+            
+            <ul></ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Madsen Wood | Idaho, US</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
