@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="styles/place-small.css">
     <link rel="stylesheet" href="styles/place-large.css">
     <script src="scripts/place.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agrave+Pro&family=Charis+SIL:ital,wght@0,400;0,700;1,700&family=Redaction:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap"
+        rel="stylesheet">
 </head>
 <body>
     <header>
@@ -62,11 +67,8 @@
             </div>
         </section>
         <section class="weather">
-            <h2>Weather</h2>
-            <picture>
-                <source srcset="images/sunny-day-red.svg" media="(min-width: 600px)"></source>
-                <img src="images/sunny-day-red.svg" alt="Weather Icon">
-            </picture>
+            <h2 class="icon">Weather</h2>
+            <img class="large" src="images/sunny-day-red.svg" alt="Weather Icon">
             <div class="row">
                 <div class="col1">Temperature:</div>
                 <div class="col2">.cr</div>

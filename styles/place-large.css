@@ -21,4 +21,12 @@
         background-color: white;
         border: white;
     }
+
+    .icon::after {
+        content: "⛅";
+    }
+
+    .large {
+        display: none;
+    }
 }

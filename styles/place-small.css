@@ -1,6 +1,11 @@
+:root {
+    --datatable-border: 5px solid red;
+}
+
 * {
     margin: 0 auto;
     padding: 0;
+    font-family: "Agrave Pro";
 }
 
 header, footer {
@@ -18,7 +23,9 @@ h1 {
     padding-top: 10px;
 }
 
-.mod {padding-bottom: 10px;}
+.mod {
+    padding-bottom: 10px;
+}
 
 main {
     display: flex;
@@ -32,7 +39,7 @@ main {
 }
 
 section {
-    border: 5px solid red;
+    border: var(--datatable-border);
     margin: 5px 0;
     padding: 0 5rem;
 }
