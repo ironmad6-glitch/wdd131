@@ -23,7 +23,7 @@
     }
 
     .icon::after {
-        content: "⛅";
+        content: "☀️";
     }
 
     .large {
