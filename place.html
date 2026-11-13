@@ -16,27 +16,78 @@
         <h1>Costa Rica</h1>
     </header>
     <main>
-        <picture>
+        <picture class="photo">
             <source srcset="images/costa-rica-large.webp" media="(min-width: 500px)">
-            <img src="images/costa-rica-small.webp" alt="Costa Rica" width="1000" height="563">
+            <img src="images/costa-rica-small.webp" alt="Costa Rica" width="1000" height="750">
         </picture>
-        <section>
+        <section class="data">
             <h2>Data</h2>
-            <ul></ul>
+            <div>
+                <div class="row">
+                    <div class="col1">Capital:</div>
+                    <div class="col2">San José</div>
+                </div>
+                <div class="row">
+                    <div class="col1">Language:</div>
+                    <div class="col2">Spanish</div>
+                </div>
+                <div class="row">
+                    <div class="col1">Area:</div>
+                    <div class="col2">51,179.92 sq km</div>
+                </div>
+                <div class="row">
+                    <div class="col1">Population:</div>
+                    <div class="col2">5,160,700</div>
+                </div>
+                <div class="row">
+                    <div class="col1">Currency:</div>
+                    <div class="col2">Costa Rican colón</div>
+                </div>
+                <div class="row">
+                    <div class="col1">Time Zone:</div>
+                    <div class="col2">UTC-6</div>
+                </div>
+                <div class="row">
+                    <div class="col1">Calling Code:</div>
+                    <div class="col2">+506</div>
+                </div>
+                <div class="row">
+                    <div class="col1">Internet TLD:</div>
+                    <div class="col2">.cr</div>
+                </div>
+                <div class="row">
+                    <div class="col1">See website:</div>
+                    <div class="col2"><a href="https://en.wikipedia.org/wiki/Costa_Rica">Wikipedia: Costa Rica</a></div>
+                </div>
+            </div>
         </section>
-        <section>
+        <section class="weather">
             <h2>Weather</h2>
             <picture>
-                <source srcset="images/sunny-day-red.svg" media="(min-width: 500px)"></source>
-                <img src="images/sunny-day.svg" alt="Weather Icon">
+                <source srcset="images/sunny-day-red.svg" media="(min-width: 600px)"></source>
+                <img src="images/sunny-day-red.svg" alt="Weather Icon">
             </picture>
-            
-            <ul></ul>
+            <div class="row">
+                <div class="col1">Temperature:</div>
+                <div class="col2">.cr</div>
+            </div>
+            <div class="row">
+                <div class="col1">Conditions:</div>
+                <div class="col2">.cr</div>
+            </div>
+            <div class="row">
+                <div class="col1">Sunny:</div>
+                <div class="col2">.cr</div>
+            </div>
+            <div class="row">
+                <div class="col1">Wind Chill:</div>
+                <div class="col2">.cr</div>
+            </div>
         </section>
     </main>
     <footer>
-        <p>&copy;<span id="currentyear"></span> | Madsen Wood | Idaho, US</p>
-        <p id="lastModified"></p>
+        <p class="foot">&copy;<span id="currentyear"></span> | Madsen Wood | Idaho, US</p>
+        <p class="mod" id="lastModified"></p>
     </footer>
 </body>
 </html>
