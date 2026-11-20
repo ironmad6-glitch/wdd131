@@ -133,5 +133,35 @@ function createTempleCards(temple) {
     }
     section.innerHTML = sections;
 };
-
 createTempleCards(temples);
+
+//Filtered Arrays
+const homeButton = document.querySelector("#home");
+const oldButton = document.querySelector("#old");
+const newButton = document.querySelector("#new");
+const largeButton = document.querySelector("#large");
+const smallButton = document.querySelector("#small");
+
+homeButton.addEventListener("click", function () {
+    createTempleCards(temples);
+});
+
+oldButton.addEventListener("click", function () {
+    let oldTemples = temples.filter(temple => Number(temple.dedicated.split(", ")[0]) < 1900);
+    createTempleCards(oldTemples);
+});
+
+newButton.addEventListener("click", function () {
+    let newTemples = temples.filter(temple => Number(temple.dedicated.split(", ")[0]) > 2000);
+    createTempleCards(newTemples);
+});
+
+largeButton.addEventListener("click", function () {
+    let largeTemples = temples.filter(temple => temple.area > 90000);
+    createTempleCards(largeTemples);
+});
+
+smallButton.addEventListener("click", function () {
+    let smallTemples = temples.filter(temple => temple.area < 10000);
+    createTempleCards(smallTemples);
+});
