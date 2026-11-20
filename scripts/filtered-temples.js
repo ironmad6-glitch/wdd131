@@ -81,7 +81,7 @@ const temples = [
     location: "Twin Falls, Idaho",
     dedicated: "2008, August, 24",
     area: 31245,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/twin-falls-idaho-temple/twin-falls-idaho-temple-56338-main.jpg"
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/twin-falls-idaho-temple/twin-falls-idaho-temple-73841-thumb.jpg"
   },
   {
     templeName: "Burley Idaho Temple",
@@ -97,7 +97,41 @@ const temples = [
     dedicated: "2008, February, 10",
     area: 57504,
     imageUrl:
-    "https://churchofjesuschristtemples.org/assets/img/temples/rexburg-idaho-temple/rexburg-idaho-temple-62899-main.jpg"
+    "https://churchofjesuschristtemples.org/assets/img/temples/rexburg-idaho-temple/rexburg-idaho-temple-73048-thumb.jpg"
   }
 ];
 
+// function templeCards(temples) {
+//     document.querySelector("#templeName").innerHTML = `${temples[0].templeName}`
+//     document.querySelector("#location").innerHTML = `${temples[0].location}`
+//     document.querySelector("#dedicated").innerHTML = `${temples[0].dedicated}`
+//     document.querySelector("#area").innerHTML = `${temples[0].area}`
+//     document.querySelector("#templeImg").src = `${temples[0].imageUrl}`
+// };
+// templeCards(temples);
+
+// function templeCards(temple) {
+//     document.querySelector("#templeName").innerHTML = `${temple.templeName}`
+//     document.querySelector("#location").innerHTML = `${temple.location}`
+//     document.querySelector("#dedicated").innerHTML = `${temple.dedicated}`
+//     document.querySelector("#area").innerHTML = `${temple.area}`
+//     document.querySelector("#templeImg").src = `${temple.imageUrl}`
+// };
+// temples.forEach(templeCards);
+
+function createTempleCards(temple) {
+    const section = document.querySelector("#templeCards");
+    let sections = "";
+    for (const card of temple) {
+        sections += `<section class="img">
+                <h2>${card.templeName}</h2>
+                <p>Location: ${card.location}</span></p>
+                <p>Dedicated: ${card.dedicated}</span></p>
+                <p>Size: ${card.area}</p>
+                <img src="${card.imageUrl}" alt="Temple" loading="lazy">
+            </section>`
+    }
+    section.innerHTML = sections;
+};
+
+createTempleCards(temples);

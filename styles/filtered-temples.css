@@ -82,9 +82,13 @@ h1 {
     font-size: 20px;
 }
 
-figure img {
-    width: 225px;
-    height: auto;
+.img {
+    margin: 5 auto;
+}
+
+.img img {
+    width: 400px;
+    height: 250px;
 }
 
 footer {
