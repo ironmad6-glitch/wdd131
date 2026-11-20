@@ -1,0 +1,104 @@
+* {
+    margin: 0 auto;
+    font-family: 'Tangerine', cursive;
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto 50px;
+    padding: 0 15px;
+    background-color: blue;
+    color: white;
+}
+
+#menu {
+    font-size: 1.5rem;
+    color: white;
+    background-color: blue;
+    border: 0;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.show::before {
+    content: "X";
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 23px;
+}
+
+header p {
+    font-size: 40px;
+    padding: 5px 0;
+    margin: 0;
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-start;
+}
+
+li {
+    display: none;
+}
+
+.show li {
+    display: block;
+    margin: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 23px;
+    padding: 10px;
+}
+
+nav a:hover {
+    background-color: aqua;
+    color: black;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 5px 10px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+/* main {
+    display: grid;
+    grid-template-rows: 2rem auto;
+    grid-template-columns: auto;
+    place-items: center;
+} */
+
+.temple {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+figure img {
+    width: 225px;
+    height: auto;
+}
+
+footer {
+    background-color: blue;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    padding: 5px;
+}
