@@ -76,16 +76,10 @@ h1 {
     justify-content: center;
 }
 
-/* main {
-    display: grid;
-    grid-template-rows: 2rem auto;
-    grid-template-columns: auto;
-    place-items: center;
-} */
-
 .temple {
     display: grid;
     grid-template-columns: auto;
+    font-size: 20px;
 }
 
 figure img {

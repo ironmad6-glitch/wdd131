@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Picture Album Assignment</title>
-    <meta name="description" content="This page is for the Picture Album assignment 
-    to review skills concerning HTML, CSS, and JS.">
+    <title>WDD 131 - Picture Album Enhancement Assignment</title>
+    <meta name="description" content="This page is for the Picture Album Enhancement
+    assignment to review skills concerning HTML, CSS, and JS and lazy loading.">
     <meta name="author" content="Madsen Wood">
     <link rel="stylesheet" href="styles/filtered-temples.css">
     <link rel="stylesheet" href="styles/filtered-temples-large.css">
@@ -35,42 +35,13 @@
             Home
         </h1>
         <div class="temple">
-            <figure>
-                <img src="images/lima-peru-temple-edit.jpg" alt="Lima Peru Temple">
-                <figcaption>Lima Peru Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/lima-peru-temple-edit.jpg" alt="Lima Peru Temple">
-                <figcaption>Lima Peru Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/lima-peru-temple-edit.jpg" alt="Lima Peru Temple">
-                <figcaption>Lima Peru Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/lima-peru-temple-edit.jpg" alt="Lima Peru Temple">
-                <figcaption>Lima Peru Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/lima-peru-temple-edit.jpg" alt="Lima Peru Temple">
-                <figcaption>Lima Peru Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/lima-peru-temple-edit.jpg" alt="Lima Peru Temple">
-                <figcaption>Lima Peru Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/lima-peru-temple-edit.jpg" alt="Lima Peru Temple">
-                <figcaption>Lima Peru Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/lima-peru-temple-edit.jpg" alt="Lima Peru Temple">
-                <figcaption>Lima Peru Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/lima-peru-temple-edit.jpg" alt="Lima Peru Temple">
-                <figcaption>Lima Peru Temple</figcaption>
-            </figure>
+            <section>
+                <h2><span id="templeName"></span></h2>
+                <p>Location: <span id="location"></span></p>
+                <p>Dedicated: <span id="dedicated"></span></p>
+                <p>Size: <span id="area"></span></p>
+                <img src="" alt="Temple" loading="lazy">
+            </section>
         </div>
     </main>
     <footer>
@@ -79,3 +50,5 @@
     </footer>
 </body>
 </html>
+
+<!-- Picture Album Enhancement temple cards -->
