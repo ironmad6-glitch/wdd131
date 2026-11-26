@@ -2,50 +2,64 @@ const input = document.querySelector('#favchap');
 const button = document.querySelector('button');
 const list = document.querySelector('#list');
 
-button.addEventListener('click', function () {
-    //Code to execute when the button is clicked.
+let chaptersArray = getChapterList() || [];
+function displayList(item) {
     if (input.value.trim() !== '') {
         const li = document.createElement('li');
-        li.textContent = input.value;
         const deleteButton = document.createElement('button');
+        li.textContent = item;
         deleteButton.textContent = '❌';
-        deleteButton.addEventListener('click', function () {
-            list.removeChild(li);
-            input.focus();
-        });
+        deletebutton.classList.add('delete'); // this references the CSS rule .delete{width:fit-content;} to size the delete button
         li.appendChild(deleteButton);
         list.appendChild(li);
-        input.value = '';
+        deleteButton.addEventListener('click', function () {
+            list.removeChild(li);
+            deleteChapter(li.textContent); // note this new function that is needed to remove the chapter from the array and localStorage.
+            input.focus();
+        });
     }
     input.focus();
+}
+function setChapterList() {
+  localStorage.setItem('myFavBOMList', JSON.stringify(chaptersArray));
+}
+function getChapterList() {
+  return JSON.parse(localStorage.getItem('myFavBOMList'));
+}
+function deleteChapter(chapter) {
+    chapter = chapter.slice(0, chapter.length - 1); // this slices off the last character
+    chaptersArray = chaptersArray.filter((item) => item !== chapter);
+    setChapterList();
+}
+
+chaptersArray.forEach(chapter => {
+    displayList(chapter)
 });
 
-// // select elements from the DOM
-// const inputElement = document.querySelector("#favchap");
-// const buttonElement = document.querySelector("button");
-// const listElement = document.querySelector("#list");
+button.addEventListener('click', () => {
+    if (input.value != '') {  // make sure the input is not empty
+    displayList(input.value); // call the function that outputs the submitted chapter
+    chaptersArray.push(input.value);  // add the chapter to the array
+    setChapterList(); // update the localStorage with the new array
+    input.value = ''; // clear the input
+    input.focus(); // set the focus back to the input
+  }
+});
 
-// // wait for button clicks
-// buttonElement.addEventListener("click", function () {
-//     // Check if the user entered something
-//     if (inputElement.value != "") {
-//         // create list item and give it the value of the input
-//         const li = document.createElement("li");
-//         li.textContent = inputElement.value;
-//         // create a button and add a click event listener
-//         const deleteBtn = document.createElement("button");
-//         deleteBtn.textContent = "❌";
-//         deleteBtn.addEventListener("click", function () {
-//             listElement.removeChild(li);
-//             inputElement.focus();
+// button.addEventListener('click', function () {
+//     //Code to execute when the button is clicked.
+//     if (input.value.trim() !== '') {
+//         const li = document.createElement('li');
+//         li.textContent = input.value;
+//         const deleteButton = document.createElement('button');
+//         deleteButton.textContent = '❌';
+//         deleteButton.addEventListener('click', function () {
+//             list.removeChild(li);
+//             input.focus();
 //         });
-//         // add the button to the list item
-//         li.appendChild(deleteBtn);
-//         // OUTPUT: finally display the completed list item to the unordered list
-//         listElement.appendChild(li);
-//         // clear the user input field
-//         inputElement.value = "";
+//         li.appendChild(deleteButton);
+//         list.appendChild(li);
+//         input.value = '';
 //     }
-//     // focus the user back to the input field
-//     inputElement.focus();
+//     input.focus();
 // });
