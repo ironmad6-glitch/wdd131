@@ -41,7 +41,7 @@ p {
     font-size: 1.25rem;
 }
 
-picture {
+figure {
     display: flex;
     flex-direction: column;
     justify-content: center;
