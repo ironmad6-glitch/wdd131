@@ -9,7 +9,7 @@ function displayList(item) {
         const deleteButton = document.createElement('button');
         li.textContent = item;
         deleteButton.textContent = '❌';
-        deletebutton.classList.add('delete'); // this references the CSS rule .delete{width:fit-content;} to size the delete button
+        deleteButton.classList.add('delete'); // this references the CSS rule .delete{width:fit-content;} to size the delete button
         li.appendChild(deleteButton);
         list.appendChild(li);
         deleteButton.addEventListener('click', function () {
