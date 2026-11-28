@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Product Review Form</title>
+    <meta name="author" content="Madsen Wood">
+    <meta name="description" content="This assignment page is to demonstrate the skills and principles learned
+    about forms and page design.">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agrave+Pro&family=Charis+SIL:ital,wght@0,400;0,700;1,700&family=Redaction:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/metro_m.svg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form method="get" action="review.html">
+            <fieldset class="product">
+                <label for="select">Product Name*</label>
+                <select id="select" name="productName" required>
+                    <option value="" disabled selected>Select a product...</option>
+                </select>
+            </fieldset>
+
+            <fieldset class="starReview">
+                <label class="review">Overall Rating*:</label>
+                <input type="radio" id="five" name="starRate" value="5" required><label for="five"></label>
+                <input type="radio" id="four" name="starRate" value="4" required><label for="four"></label>
+                <input type="radio" id="three" name="starRate" value="3" required><label for="three"></label>
+                <input type="radio" id="two" name="starRate" value="2" required><label for="two"></label>
+                <input type="radio" id="one" name="starRate" value="1" required><label for="one"></label>
+            </fieldset>
+
+            <fieldset class="date">
+                <label for="dateInstall">Date of Installation*</label>
+                <input type="date" id="dateInstall" name="dateInstall" required>
+            </fieldset>
+
+            <fieldset class="features">
+                <label>Which features did you find useful in the product? (Optional)</label>
+                <label><input type="checkbox" name="durable" value="yes">Durability</label>
+                <label><input type="checkbox" name="ease" value="yes">Ease of Use</label>
+                <label><input type="checkbox" name="perform" value="yes">Performance</label>
+                <label><input type="checkbox" name="design" value="yes">Design</label>
+            </fieldset>
+
+            <fieldset class="write">
+                <label for="writeRev">Written Review <span>(Optional)</span></label>
+                <textarea id="writeRev" name="writeReview" rows="3"></textarea>
+            </fieldset>
+
+            <fieldset class="userName">
+                <label for="name">Your name <span>(Optional)</span></label>
+                <input type="text" id="name" name="name">
+            </fieldset>
+
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Madsen Wood | Idaho, US</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
+
+<!-- week05 Form Assignment -->
