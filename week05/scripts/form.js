@@ -36,17 +36,26 @@ const products = [
   }
 ];
 
-function createOptions(array) {
-    const productSelect = document.getElementById("#select");
-    const options = document.createElement("option");
-    for (const product of array) {
-        // options += `<option value="${product.name.replace(" ","-")}" disabled selected>${product.name}</option>`
-        options.value = product.name.replaceAll(" ", "-");
-        options.textContent = product.name;
-    }
-    productSelect.appendChild(options);
-    // productSelect.innerHTML = options;
-    // productSelect.innerHTML.appendChild(options);
-};
+const productSelect = document.querySelector("#select");
 
-createOptions(products);
+products.forEach((product) => {
+    const option = document.createElement("option");
+    option.value = product.name.replace(" ", "-");
+    option.textContent = product.name;
+    productSelect.appendChild(option);
+});
+
+// function createOptions(array) {
+//     const productSelect = document.getElementById("#select");
+//     const options = document.createElement("option");
+//     for (const product of array) {
+//         // options += `<option value="${product.name.replace(" ","-")}" disabled selected>${product.name}</option>`
+//         options.value = product.name.replaceAll(" ", "-");
+//         options.textContent = product.name;
+//     }
+//     productSelect.appendChild(options);
+//     // productSelect.innerHTML = options;
+//     // productSelect.innerHTML.appendChild(options);
+// };
+
+// createOptions(products);
