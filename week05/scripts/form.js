@@ -60,8 +60,3 @@ products.forEach((product) => {
 
 // createOptions(products);
 
-// Local Storage: number of reviews completed
-// const reviewsComplete = document.querySelector(".complete");
-let numReviews = Number(window.localStorage.getItem("numReviews-ls")) || 0;
-numReviews++;
-localStorage.setItem("numReviews-ls", numReviews);
