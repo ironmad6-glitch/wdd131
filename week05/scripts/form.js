@@ -38,13 +38,15 @@ const products = [
 
 function createOptions(array) {
     const productSelect = document.getElementById("#select");
-    let options = "";
+    const options = document.createElement("option");
     for (const product of array) {
-        options += `<option value="${product.name.replace(" ","-")}" disabled selected>${product.name}</option>`
+        // options += `<option value="${product.name.replace(" ","-")}" disabled selected>${product.name}</option>`
+        options.value = product.name.replaceAll(" ", "-");
+        options.textContent = product.name;
     }
-    // productSelect.appendChild(options);
+    productSelect.appendChild(options);
     // productSelect.innerHTML = options;
-    productSelect.innerHTML.appendChild(options);
+    // productSelect.innerHTML.appendChild(options);
 };
 
 createOptions(products);
