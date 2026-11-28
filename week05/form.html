@@ -21,7 +21,7 @@
     <main>
         <form method="get" action="review.html">
             <fieldset class="product">
-                <label>Product Name*</label>
+                <label for="select">Product Name*</label>
                 <select id="select" name="productName" required>
                     <option value="" disabled selected>Select a product...</option>
                 </select>
@@ -37,7 +37,7 @@
             </fieldset>
 
             <fieldset class="date">
-                <label>Date of Installation</label>
+                <label for="date">Date of Installation</label>
                 <input type="date" name="dateInstall" required>
             </fieldset>
 
@@ -50,13 +50,13 @@
             </fieldset>
 
             <fieldset class="write">
-                <label>Written Review <span>(Optional)</span></label>
-                <textarea name="writeReview" rows="3"></textarea>
+                <label for="writeRev">Written Review <span>(Optional)</span></label>
+                <textarea id="writeRev" name="writeReview" rows="3"></textarea>
             </fieldset>
 
             <fieldset class="userName">
-                <label>Your name <span>(Optional)</span></label>
-                <input type="text" name="name">
+                <label for="name">Your name <span>(Optional)</span></label>
+                <input type="text" id="name" name="name">
             </fieldset>
 
             <input type="submit" value="Post Review">
