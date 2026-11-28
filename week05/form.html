@@ -17,14 +17,14 @@
     <main>
         <form action="get" action="review.html">
             <fieldset class="product">
-                <label>Product Name*
-                <select name="productName" required>
-                <option value="" disabled selected>Select a product...</option>
+                <label>Product Name*</label>
+                <select id="select" name="productName" required>
+                    <option value="" disabled selected>Select a product...</option>
                 </select>
             </fieldset>
 
             <fieldset class="starReview">
-                <label class="review">Overall Rating</label>
+                <label class="review">Overall Rating:</label>
                 <input type="radio" id="five" name="starRate" value="5" required><label for="five"></label>
                 <input type="radio" id="four" name="starRate" value="4" required><label for="four"></label>
                 <input type="radio" id="three" name="starRate" value="3" required><label for="three"></label>
@@ -47,7 +47,7 @@
 
             <fieldset class="write">
                 <label>Written Review <span>(Optional)</span></label>
-                <input type="textarea" name="writeReview">
+                <textarea name="writeReview" rows="3"></textarea>
             </fieldset>
 
             <fieldset class="userName">
