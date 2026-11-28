@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Product Review Form</title>
+    <meta name="author" content="Madsen Wood">
+    <meta name="description" content="This assignment page is to demonstrate the skills and principles learned
+    about forms and page design.">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form action="get" action="review.html">
+            <fieldset class="product">
+                <label>Product Name*
+                <select name="productName" required>
+                <option value="" disabled selected>Select a product...</option>
+                </select>
+            </fieldset>
+
+            <fieldset class="starReview">
+                <label class="review">Overall Rating</label>
+                <input type="radio" id="five" name="starRate" value="5" required><label for="five"></label>
+                <input type="radio" id="four" name="starRate" value="4" required><label for="four"></label>
+                <input type="radio" id="three" name="starRate" value="3" required><label for="three"></label>
+                <input type="radio" id="two" name="starRate" value="2" required><label for="two"></label>
+                <input type="radio" id="one" name="starRate" value="1" required><label for="one"></label>
+            </fieldset>
+
+            <fieldset class="date">
+                <label>Date of Installation</label>
+                <input type="date" name="dateInstall" required>
+            </fieldset>
+
+            <fieldset class="features">
+                <label>Which features did you find useful in the product?</label>
+                <label><input type="checkbox" name="durable" value="yes">Durability</label>
+                <label><input type="checkbox" name="ease" value="yes">Ease of Use</label>
+                <label><input type="checkbox" name="perform" value="yes">Performance</label>
+                <label><input type="checkbox" name="design" value="yes">Design</label>
+            </fieldset>
+
+            <fieldset class="write">
+                <label>Written Review <span>(Optional)</span></label>
+                <input type="textarea" name="writeReview">
+            </fieldset>
+
+            <fieldset class="userName">
+                <label>Your name <span>(Optional)</span></label>
+                <input type="text" name="name">
+            </fieldset>
+
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Madsen Wood | Idaho, US</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
+
 <!-- week05 Form Assignment -->

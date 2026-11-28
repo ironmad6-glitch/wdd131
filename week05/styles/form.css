@@ -1,0 +1,51 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.starReview {
+    flex-direction: row;
+}
+
+span {
+    color: green;
+}
+
+/* Overall Review Stars */
+/* Followed CodePen example from WDD 131 W05 Assignment: Product Review Form  */
+/* Step 2, number 2, check Overall Rating, bullet one */
+.starReview > label {
+    font-size: 1.75rem;
+    color: gold;
+}
+
+.starReview > label:hover{
+    color: black;
+}
+
+.starReview > .review {
+    font-size: 1rem;
+    color: black;
+}
+
+.starReview > label::before {
+    content: "\2606";
+}
+
+.starReview input:checked ~ label::before {
+    content: "\2605";
+}
+
+.starReview input {
+    display: none;
+}
+
+.review::before {
+    display: none;
+}
